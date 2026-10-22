@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #080d18;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px),
+    radial-gradient(#7c9cff 1px, transparent 1px);
+  background-size: 65px 65px, 103px 103px;
+  background-position: 0 0, 30px 40px;
+  opacity: .25;
+}
+
+.capsule {
+  position: relative;
+  width: min(100%, 650px);
+  padding: 32px;
+  text-align: center;
+  border: 1px solid #263650;
+  border-radius: 18px;
+  background: #0b1220dd;
+  box-shadow: 0 0 80px #4169e11a;
+}
+
+.label, .footer {
+  color: #8296b9;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.label {
+  text-align: left;
+}
+
+.planet {
+  margin: 38px auto 25px;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 45px;
+  color: #b6ccff;
+  background: radial-gradient(circle at 30% 30%, #b7d4ff, #425f9d 55%, #15233e);
+  box-shadow: 0 0 35px #729cff45;
+  animation: float 4s ease-in-out infinite;
+}
+
+.eyebrow {
+  color: #91b4ff;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: clamp(34px, 7vw, 55px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #9abaff;
+}
+
+.subtitle {
+  margin-top: 15px;
+  color: #9aa9c2;
+  font-size: 13px;
+}
+
+.letter {
+  margin: 35px 0 25px;
+  padding: 24px;
+  text-align: left;
+  border: 1px solid #263650;
+  border-radius: 12px;
+  background: #111b2c;
+}
+
+.letter-label {
+  color: #9abaff;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.message {
+  margin: 22px 0;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #e0e7f5;
+}
+
+.signature {
+  color: #91a6ca;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.footer {
+  font-size: 9px;
+}
+
+@keyframes float {
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 480px) {
+  .capsule { padding: 22px 17px; }
+  .letter { padding: 18px; }
+  .message { font-size: 15px; }
+  .eyebrow { letter-spacing: 2px; }
+}
